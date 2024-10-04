@@ -1,0 +1,10 @@
+easydict
+h5py
+open3d
+opencv-python
+pyyaml
+tensorboardX
+timm==0.4.5
+tqdm
+transforms3d
+termcolor
