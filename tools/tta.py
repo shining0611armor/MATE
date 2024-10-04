@@ -16,7 +16,8 @@ def load_tta_dataset(args, config):
     root = config.tta_dataset_path  # being lazy - 1
 
     if args.dataset_name == 'modelnet':
-        root = os.path.join(root, f'{args.dataset_name}_c')
+        root = '/content/MATE/modelnet40_c/modelnet40_c'
+
 
         if args.corruption == 'clean':
             inference_dataset = tta_datasets.ModelNet_h5(args, root)
