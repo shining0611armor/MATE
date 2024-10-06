@@ -647,8 +647,6 @@ def tta(args, config, train_writer=None):
                     elif dataset_name in ['scanobject', 'scanobject_nbg']:
                         points = data.cuda()
                         points = misc.fps(points, npoints)
-                    elif dataset_name == 'partnet':
-                        points = data.cuda()
                     else:
                         raise NotImplementedError
 
