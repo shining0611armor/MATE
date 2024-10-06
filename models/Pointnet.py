@@ -146,20 +146,6 @@ def feature_transform_reguliarzer(trans):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class get_model(nn.Module):
     def __init__(self, k=40, normal_channel=True):
         super(get_model, self).__init__()
