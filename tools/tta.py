@@ -656,7 +656,7 @@ def tta(args, config, train_writer=None):
                     if idx % args.stride_step == 0 or idx == len(tta_loader) - 1:
                         points = [points for _ in range(args.batch_size_tta)]
                         points = torch.squeeze(torch.vstack(points))
-
+                        
                         loss_recon, loss_p_consistency, loss_regularize = base_model(points)
                         loss = loss_recon + (args.alpha * loss_regularize)  # + (0.0001 * loss_p_consistency)
                         loss = loss.mean()
@@ -672,12 +672,12 @@ def tta(args, config, train_writer=None):
                         losses.update([loss.item() * 1000])
                     else:
                         losses.update([loss.item() * 1000])
-
+                    '''
                     print_log(f'[TEST - {args.corruption}], Sample - {idx} / {total_batches},'
                               f'GradStep - {grad_step} / {args.grad_steps},'
                               f'Reconstruction Loss {[l for l in losses.val()]}',
                               logger=logger)
-
+                    '''
                 # now inferring on this one sample
                 base_model.eval()
                 points = data.cuda()
