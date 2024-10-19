@@ -691,7 +691,7 @@ def tta(args, config, train_writer=None):
                 test_pred.append(pred.detach())
                 test_label.append(target.detach())
 
-                if idx % 50 == 0:
+                if idx % 100 == 0:
                     test_pred_ = torch.cat(test_pred, dim=0)
                     test_label_ = torch.cat(test_label, dim=0)
 
