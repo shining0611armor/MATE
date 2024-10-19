@@ -89,7 +89,7 @@ def main(args):
     else:
         raise NotImplementedError
     args.disable_bn_adaptation = True
-    args.batch_size_tta = 48
+    args.batch_size_tta = 1
     args.batch_size = 1
     config.model.transformer_config.mask_ratio = args.mask_ratio  # overwrite the mask_ratio configuration parameter
     config.model.group_norm = args.group_norm
